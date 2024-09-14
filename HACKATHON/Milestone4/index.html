@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Editable Resume Builder</h1>
+        
+        <form id="resumeForm">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            
+            <h2>Education</h2>
+            <div id="educationFields">
+                <div class="education-entry">
+                    <input type="text" name="degree[]" placeholder="Degree" required>
+                    <input type="text" name="school[]" placeholder="School/University" required>
+                    <input type="number" name="graduationYear[]" placeholder="Graduation Year" required>
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add Education</button>
+            
+            <h2>Work Experience</h2>
+            <div id="experienceFields">
+                <div class="experience-entry">
+                    <input type="text" name="jobTitle[]" placeholder="Job Title" required>
+                    <input type="text" name="company[]" placeholder="Company" required>
+                    <textarea name="jobDescription[]" placeholder="Job Description" required></textarea>
+                </div>
+            </div>
+            <button type="button" id="addExperience">Add Experience</button>
+            
+            <h2>Skills</h2>
+            <textarea id="skills" name="skills" placeholder="Enter skills, separated by commas" required></textarea>
+            
+            <button type="submit">Generate Resume</button>
+        </form>
+        
+        <div id="resumeOutput" style="display: none;">
+            <h2>Your Editable Resume</h2>
+            <div id="resumeContent" class="editable-resume">
+                <h1 id="resumeName" contenteditable="true"></h1>
+                <p id="resumeContact" contenteditable="true"></p>
+                
+                <h2>Education</h2>
+                <div id="resumeEducation"></div>
+                <button type="button" id="addEducationToResume">Add Education</button>
+                
+                <h2>Work Experience</h2>
+                <div id="resumeExperience"></div>
+                <button type="button" id="addExperienceToResume">Add Experience</button>
+                
+                <h2>Skills</h2>
+                <ul id="resumeSkills" contenteditable="true"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
