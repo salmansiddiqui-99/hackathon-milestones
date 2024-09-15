@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.education-entry, .experience-entry {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#resumeOutput {
+    margin-top: 30px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+}
+
+.editable-resume [contenteditable="true"] {
+    border: 1px dashed #ccc;
+    padding: 5px;
+    margin: 5px 0;
+    min-height: 20px;
+}
+
+.editable-resume [contenteditable="true"]:hover {
+    background-color: #f0f0f0;
+}
+
+.editable-resume [contenteditable="true"]:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+.education-item, .experience-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addEducationToResume, #addExperienceToResume {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for the shareable link container */
+#shareable-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#shareable-link-container h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#shareable-link-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#shareable-link-container a {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#shareable-link-container a:hover {
+  text-decoration: underline;
+}
+
+#shareable-link-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#shareable-link-container button:hover {
+  background-color: #45a049;
+}
+
+button.down-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button.down-btn:hover {
+    background-color: #0056b3;
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+    header, footer, button {
+        display: none; /* Hide header, footer, and button on print */
+    }
+}
+
+button.share-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button.share-btn:hover {
+    background-color: #0056b3;
+}
